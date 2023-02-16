@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import React from 'react'
+import femaleProfile from '../images/femaleProfile.jpg'
+import maleProfile from '../images/maleProfile.jpg'
 
 const Employees = () => {
   // List of Employees
@@ -92,14 +94,29 @@ const Employees = () => {
   ])
 
   return (
-    <main>
-      <ul>
-        {employees.map(employee => (
-          <li>
-            {employee.fullName} - <span>{employee.designation}</span>
-          </li>
-        ))}
-      </ul>
+    <main className='container'>
+      <div className='row justify-content-center mt-3 mb-3'>
+        <div className='col-8'>
+          <div className='card-collection'>
+            {employees.map(employee => (
+              <div className='card m-2' id={employee.id}>
+                <img
+                  src={femaleProfile}
+                  className='card-img-top'
+                  alt='femaleProfile'
+                />
+                <div className='card-body'>
+                  <h3 className='card-title'>FullName: {employee.fullName}</h3>
+                  <p className='card-text'>
+                    <b>Designation: </b>
+                    {employee.designation}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </main>
   )
 }

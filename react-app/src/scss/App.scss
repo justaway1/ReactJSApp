@@ -1,5 +1,6 @@
 @import "./fixedValues.scss", "./utilities.scss";
 
-.custom_content {
-  color: $main_color;
+.card-collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

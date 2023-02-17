@@ -3,4 +3,12 @@
 .card-collection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  .card {
+    cursor: pointer;
+  }
+
+  .standout {
+    box-shadow: 20px 20px 20px black;
+  }
 }

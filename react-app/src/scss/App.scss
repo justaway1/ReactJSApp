@@ -21,3 +21,9 @@ h5,
 p {
   text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+  .card-collection {
+    grid-template-columns: 1fr;
+  }
+}

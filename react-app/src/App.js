@@ -5,11 +5,12 @@ import Footer from './Components/Footer'
 import Employees from './Components/Employees'
 import GroupedTeamMembers from './Components/GroupedTeamMembers'
 import Nav from './Components/Nav'
+import PageNotFound from './Components/PageNotFound'
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App () {
-  const [selectedTeam, setSelectedTeam] = useState(
+  const [selectedTeam, setTeam] = useState(
     JSON.parse(localStorage.getItem('selectedTeam')) || 'TeamA'
   )
 
@@ -103,7 +104,7 @@ function App () {
   )
 
   function handleTeamSelectionChange (event) {
-    setSelectedTeam(event.target.value)
+    setTeam(event.target.value)
   }
 
   function handleEmployeeCardClick (event) {
@@ -150,8 +151,15 @@ function App () {
         ></Route>
         <Route
           path='/GroupedTeamMembers'
-          element={<GroupedTeamMembers />}
+          element={
+            <GroupedTeamMembers
+              employees={employees}
+              selected={selectedTeam}
+              setTeam={setTeam}
+            />
+          }
         ></Route>
+        <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
       <Footer />
     </Router>

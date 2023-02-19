@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactJSApp/react-app/static/css/main.1c1dc31d.css",
+    "main.js": "/ReactJSApp/react-app/static/js/main.e844da98.js",
+    "static/media/maleProfile.jpg": "/ReactJSApp/react-app/static/media/maleProfile.657c4196488ead649e93.jpg",
+    "static/media/femaleProfile.jpg": "/ReactJSApp/react-app/static/media/femaleProfile.48d77dc2519df08d5cc5.jpg",
+    "index.html": "/ReactJSApp/react-app/index.html",
+    "main.1c1dc31d.css.map": "/ReactJSApp/react-app/static/css/main.1c1dc31d.css.map",
+    "main.e844da98.js.map": "/ReactJSApp/react-app/static/js/main.e844da98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c1dc31d.css",
+    "static/js/main.e844da98.js"
+  ]
+}
